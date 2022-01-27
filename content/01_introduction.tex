@@ -1,4 +1,114 @@
 %! Author = Philipp Emmenegger
 %! Date = 30/06/2021
 
-\section{ComBau}
+\section{Einführung}
+\textbf{Nutzen ComBau}
+\begin{itemize}
+    \item Programmiersprachen und Sprachkonzepte besser verstehen
+    \item Sprachfeatures beurteilen können
+    \item Konzepte in verwandten Bereichen einsetzen
+\end{itemize}
+
+\subsection{Begriffe}
+\textbf{Compiler}
+\begin{itemize}
+    \item Transformiert Quellcode in Maschinencode
+\end{itemize}
+\textbf{Runtime System}
+\begin{itemize}
+    \item Unterstützt die Programmausführung mit Software und Hardware Mechanismen
+\end{itemize}
+\textbf{Syntax}
+\begin{itemize}
+    \item Definiert Struktur des Programms
+    \item Bewährte Formalismen für Syntax
+\end{itemize}
+\textbf{Semantik}
+\begin{itemize}
+    \item Definiert Bedeutung des Programms
+    \item Meist in Prosa beschrieben
+\end{itemize}
+
+\subsection{Architekturen}
+\begin{center}
+    \includegraphics[width=0.6\linewidth]{/architekturen.png} 
+\end{center}
+
+\subsection{Aufbau Compiler}
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{/aufbau_compiler.png} 
+\end{center}
+\subsubsection{Lexer}
+\textbf{Lexikalische Analyse, Scanner}
+\begin{itemize}
+    \item Zerlegt Programmtext in Terminalsymbole (Tokens)
+    \item keine Tiefenstruktur
+\end{itemize}
+\subsubsection{Parser}
+\textbf{Syntaktische Analyse}
+\begin{itemize}
+    \item Erzeugt Syntaxbaum gemäss Programmstruktur
+    \item Kontextfreie Sprache
+\end{itemize}
+\subsubsection{Semantic Checker}
+\textbf{Semantische Analyse}
+\begin{itemize}
+    \item Löst Symbole auf
+    \item Prüft Typen und semantische Regeln
+\end{itemize}
+\subsubsection{Optimization}
+\begin{itemize}
+    \item Wandelt Zwischendarstellung in effizientere um
+\end{itemize}
+\subsubsection{Code Generation}
+\begin{itemize}
+    \item Erzeugt ausführbarer Maschinencode
+\end{itemize}
+\subsubsection{Zwischenarstellung}
+\textbf{Intermediate Representation}
+\begin{itemize}
+    \item Beschreibt Programm als Datenstruktur (diverse Varianten)
+\end{itemize}
+
+\subsection{Aufbau Laufzeitsystem}
+\begin{center}
+    \includegraphics[width=0.4\linewidth]{/aufbau_laufzeitsystem.png} 
+\end{center}
+\subsubsection{Loader}
+\begin{itemize}
+    \item Lädt Maschinencode in Speicher
+    \item Veranlasst Ausführung
+\end{itemize}
+\subsubsection{Interpreter}
+\begin{itemize}
+    \item Liest Instruktionen und emuliert diese in Software
+\end{itemize}
+\subsubsection{JIT (Just-In-Time) Compiler}
+\begin{itemize}
+    \item Übersetzt Code-Teile in Hardware-Instruktionscode
+\end{itemize}
+\subsubsection{HW-Ausführung (nativ)}
+\begin{itemize}
+    \item Lässt Instruktionscode direkt auf HW-Prozessor laufen
+\end{itemize}
+\subsubsection{Metadaten, Heap + Stacks}
+\begin{itemize}
+    \item Merken Programminfos, Objekte und Prozeduraufrufe
+\end{itemize}
+\subsubsection{Garbage Collection}
+\begin{itemize}
+    \item Räumt nicht erreichbare Objecte ab
+\end{itemize}
+\newpage
+
+\subsection{Syntax}
+\subsubsection{EBNF}
+\textbf{Extended Backus-Naur Form}
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{/ebnf.png} 
+    \includegraphics[width=0.5\linewidth]{/ebnf_regeln.png} 
+\end{center}
+\subsubsection{Arithmetische Ausdrücke}
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{/ebnf_arithmetisch.png} 
+\end{center}

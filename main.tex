@@ -23,7 +23,7 @@
 \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 
 %Image Folder:
-\graphicspath{{../img/}}
+\graphicspath{{./img/}}
 
 %format
 \geometry{top=0.4cm,left=0.5cm,right=0.5cm,bottom=0.4cm}
@@ -32,13 +32,15 @@
 % Code Snippets
 
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} 
 
 \lstset{
-language=C,
+language=Java,
 basicstyle=\fontsize{7}{7} \ttfamily,
-keywordstyle=\bfseries\color{RoyalBlue},
+keywordstyle=\bfseries\color{javapurple},
 stringstyle=\color{javared},
-commentstyle=\color{MidnightBlue},
+commentstyle=\color{javagreen},
 morecomment=[s][\color{MidnightBlue}]{/**}{*/},
 tabsize=2,
 showspaces=false,
@@ -46,7 +48,7 @@ showstringspaces=false,
 texcl = true,
 rulecolor = \color{black},
 breaklines = true,
-aboveskip = 0em,
+aboveskip = 0.5em,
 belowskip = 0em
 }
 
@@ -59,7 +61,7 @@ belowskip = 0em
 {}
 {0pt}
 {\colorsection}
-\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\section}{0pt}{3pt}{3pt}
 
 \newcommand{\colorsection}[1]{%
 \colorbox{MidnightBlue!40}{\parbox{0.98\linewidth}{\color{black}\thesection\ #1}}}
@@ -71,7 +73,7 @@ belowskip = 0em
 {}
 {0pt}
 {\colorsubsection}
-\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{3pt}{3pt}
 
 \newcommand{\colorsubsection}[1]{%
 \colorbox{YellowGreen!50}{\parbox{0.98\linewidth}{\color{black}\thesubsection\ #1}}}
@@ -82,7 +84,7 @@ belowskip = 0em
 {}
 {0pt}
 {\colorsubsubsection}
-\titlespacing*{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{3pt}{3pt}
 
 \newcommand{\colorsubsubsection}[1]{%
 \colorbox{Goldenrod!50}{\parbox{0.98\linewidth}{\color{black}\thesubsubsection\ #1}}}
@@ -96,6 +98,17 @@ belowskip = 0em
     \begin{multicols*}{2}
 
         \input{./content/01_introduction.tex}
+        \newpage
+        \input{./content/02_lexikalische_analyse.tex}
+        \newpage
+        \input{./content/03_parser.tex}
+        \newpage
+        \input{./content/04_parser_vertiefung.tex}
+        \newpage
+        \input{./content/05_semantische_analyse.tex}
+        \newpage
+        \input{./content/06_code_generierung.tex}
+        \newpage
 
     \end{multicols*}
 \end{document}
